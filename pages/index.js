@@ -14,7 +14,7 @@ export default function Home() {
         <h2 className="text-left text-6xl font-bold">I am Starcode</h2>
         <h2 className="text-left text-2xl font-bold">I am a developer and I love people who wear capes</h2>
         </div>
-      <div className="">mdbh</div>
+      <div className="">An Icon or something</div>
     </div>
     </>
   )
