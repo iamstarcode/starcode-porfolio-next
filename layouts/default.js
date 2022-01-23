@@ -8,7 +8,7 @@ const DefaultLayout = ({ children }) => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex h-screen">
+      <div className="flex h-screen w-screen">
       <SideBar/>
         <div className="flex flex-col flex-1">
              <Navbar/>

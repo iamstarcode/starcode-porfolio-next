@@ -6,7 +6,7 @@ export const bee: ColorScheme = {
     type: "light",
     colors: {
       bg: {
-        base: colors.warmGray["100"],
+        base: colors.white,
         fill: colors.warmGray["100"],
       },
       text: {
