@@ -29,7 +29,7 @@ const NavBar = () => {
     const linkStyle = 'inline-block py-4 px-4 mr-1 text-sm font-medium text-center rounded-t-lg hover:border-b-4 dark:text-blue-500 dark:border-blue-500'
 
     return ( <>
-     <div className="antialiased dark-mode:bg-gray-900">
+     <div className="antialiased">
             <div className="w-full text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
               <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                 <div className="flex flex-row items-center justify-between p-4">

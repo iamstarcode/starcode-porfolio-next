@@ -3,10 +3,10 @@ import { colors, ColorScheme } from "@vechaiui/react";
 
 export const bee: ColorScheme = {
     id: "bee",
-    type: "light",
+    type: "dark",
     colors: {
       bg: {
-        base: colors.white,
+        base: colors.blueGray['900'],
         fill: colors.warmGray["100"],
       },
       text: {
