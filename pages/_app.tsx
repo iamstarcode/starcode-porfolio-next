@@ -2,22 +2,25 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import DefaultLayout from '../layouts/default'
 import { extendTheme, VechaiProvider } from '@vechaiui/theme'
-import { bee } from '../themes/theme';
+import { iDark, iLight } from '../themes/theme';
 import * as atoms from '../stores/store'
 import { useAtom } from 'jotai'
+
 
 const theme = extendTheme({
   cursor: "pointer",
   colorSchemes: {
-    bee,
+    iDark,
+    iLight
   },
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // console.log(useAtom(atoms.theme))
-
+  
+  const [selectedTheme,change] = useAtom(atoms.darkModeAtom);
+  
   return <DefaultLayout>
-    <VechaiProvider theme={theme} colorScheme="bee">
+    <VechaiProvider theme={theme} colorScheme={selectedTheme?'iDark':'iLight'}>
       <Component {...pageProps} />
     </VechaiProvider>
   </DefaultLayout>

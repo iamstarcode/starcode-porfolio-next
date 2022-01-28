@@ -16,7 +16,6 @@ const NavBar = () => {
     const [menu, toggleMenu] = useToggle(false);
     const [darkMode, setDarkMode] = useAtom(atoms.darkModeAtom) 
 
-    //when ever the 
     useEffect(()=>{
         darkMode?
         document.documentElement.classList.add('dark')
@@ -24,13 +23,12 @@ const NavBar = () => {
     },[darkMode])
 
     const router  = useRouter();
-    const activeLink = 'text-[#f59e0b] border-[#f59e0b] border-b-4 '
-    const link = 'text-gray-500 border-b-0 hover:border-b-4 hover:border-gray-500'
-    const linkStyle = 'inline-block py-4 px-4 mr-1 text-sm font-medium text-center rounded-t-lg hover:border-b-4 dark:text-blue-500 dark:border-blue-500'
+    const activeLink = 'text-[#f59e0b] border-orange-400 border-b-4 '
+    const link = 'text-slate-500 dark:text-slate-400 border-b-0 hover:border-b-4 hover:border-gray-400'
+    const linkStyle = 'inline-block py-4 px-4 mr-1 text-sm font-medium text-center rounded-t-lg hover:border-b-4 '
 
     return ( <>
-     <div className="antialiased">
-            <div className="w-full text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
+            <div className="w-full  text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
               <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                 <div className="flex flex-row items-center justify-between p-4">
                   <div className="hidden md:flex">XS</div>
@@ -52,17 +50,15 @@ const NavBar = () => {
                   <a  data-color="primary" className={`${linkStyle} ${router.asPath==='/' ? activeLink : link}`} >home</a>
                   </Link>
 
-                  <Link href="/blog">
-                  <a className={` ${linkStyle} ${router.asPath==='/blog' ? activeLink : link}`} >portfolio</a>
+                  <Link href="/about">
+                  <a className={` ${linkStyle} ${router.asPath==='/about' ? activeLink : link}`} >about</a>
                   </Link>
                     <ClientOnly>
                     {<Switch color="primary"  checked={darkMode} onChange={()=>setDarkMode(!darkMode)}/>}
                     </ClientOnly>
-                 
                 </nav>
               </div>
             </div>
-          </div>
     </> );
 }
  
