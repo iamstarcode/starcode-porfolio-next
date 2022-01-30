@@ -53,6 +53,10 @@ const NavBar = () => {
                   <Link href="/about">
                   <a className={` ${linkStyle} ${router.asPath==='/about' ? activeLink : link}`} >about</a>
                   </Link>
+
+                  <Link href="/portfolio">
+                  <a className={` ${linkStyle} ${router.asPath==='/portfolio' ? activeLink : link}`} >about</a>
+                  </Link>
                     <ClientOnly>
                     {<Switch color="primary"  checked={darkMode} onChange={()=>setDarkMode(!darkMode)}/>}
                     </ClientOnly>
